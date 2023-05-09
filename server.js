@@ -25,6 +25,6 @@ io.on('connection', (socket) => {
     io.emit('chat message', { username: socket.username, message: msg });
   });
 });
-chatserver.server.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`chat server listening on ${PORT}`);
   });
