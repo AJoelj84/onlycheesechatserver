@@ -6,8 +6,9 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors:{
-    origin: 'https://only-cheese.herokuapp.com/',
-    methods: ["GET", "POST"]
+    origin: "*",
+    // origin: 'https://only-cheese.herokuapp.com/',
+    // methods: ["GET", "POST"]
   }
 });
 io.on('connection', (socket) => {
