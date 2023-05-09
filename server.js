@@ -6,7 +6,8 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors:{
-    origin: 'https://only-cheese.herokuapp.com/',
+    origin: 'https://only-cheese.herokuapp.com/chat.html',
+    origin: 'http://localhost:3001/',
     methods: ["GET", "POST"]
   }
 });
